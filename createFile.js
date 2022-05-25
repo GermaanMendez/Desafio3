@@ -20,4 +20,4 @@ const productos=[
 ]
 
 
-fs.writeFileSync('productos.txt',JSON.stringify(productos))
+fs.writeFileSync('productos.json',JSON.stringify(productos))

@@ -6,8 +6,8 @@ const app = express()
 
 const PORT=8080
 
-const server = app.listen(8082)
-const data = fs.readFileSync('./productos.txt')
+const server = app.listen(8083)
+const data = fs.readFileSync('./productos.json')
 
 app.get('/products',(request,response)=>{
     response.send(data)
@@ -15,8 +15,9 @@ app.get('/products',(request,response)=>{
 
 const numero=Math.floor(Math.random()*data.length)
 
+
 app.get('/productoRandom',(request,response)=>{
-    response.send(data[numero])
+    response.send('el numero es ' + data[numero])
 })
 
 
